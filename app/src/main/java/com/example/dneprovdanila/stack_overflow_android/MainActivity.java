@@ -53,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toast.makeText(getApplicationContext(), "onCreate", Toast.LENGTH_LONG).show();
-        //Log.d(Html.,"113");
         setContentView(R.layout.activity_main);
 
 
@@ -95,8 +93,6 @@ public class MainActivity extends AppCompatActivity {
 
         Observable<API> observable = apiService.getproductdata(100,"desc", "activity","android", "stackoverflow").subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread());
-
-
 
 
 
